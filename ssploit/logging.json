@@ -1,0 +1,41 @@
+{
+    "logging": {
+        "version": 1,
+        "disable_existing_loggers": true,
+        "formatters": {
+            "ssploit-file": {
+                "class": "logging.Formatter",
+                "style": "{",
+                "datefmt": "%Y-%m-%d_%H-%M-%S",
+                "format": "[{asctime:s}] {message:s}"
+            },
+            "ssploit-stdout": {
+                "class": "logging.Formatter",
+                "style": "{",
+                "datefmt": "%Y-%m-%d_%H-%M-%S",
+                "format": "{message:s}"
+            }
+        },
+        "handlers": {
+            "console":{
+                "level": "DEBUG",
+                "class": "logging.StreamHandler",
+                "formatter": "ssploit-stdout",
+                "stream" : "ext://sys.stdout"
+            },
+            "file_handler": {
+                "level": "DEBUG",
+                "class": "logging.handlers.WatchedFileHandler",
+                "formatter": "ssploit-file",
+                "filename": "./logs/ssploit-activity.log",
+                "mode": "a",
+                "encoding": "utf-8"
+            }
+        },
+        "loggers": { },
+        "root": {
+            "handlers": ["file_handler"],
+            "level": "DEBUG"
+        }
+    }
+}
