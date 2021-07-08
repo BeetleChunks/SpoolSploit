@@ -6,12 +6,12 @@ SpoolSploit is a collection of Windows print spooler exploits containerized with
 
 ![img](./media/SpoolSploit-Usage.PNG)
 
-## Getting Stared
+## Getting Started
 As of the release date the SpoolSploit Docker container has been tested successfully on the latest versions of ```MacOS```, ```Ubuntu Linux```, and ```Windows 10```.
 
 Although not required, if you would like to host malicious DLLs or conduct credential relay attacks, all within the SpoolSploit container, you should ensure port 445 is not in use on the host running Docker. This is most prevalent when running this container on a Windows host, as it uses port 445 by default. If disabling port 445 on your host is not practical, that is okay! You can simply run the docker container in a virtual machine that has the network adapter configured in bridge mode. This will allow for serving malicious DLLs and relay credentials. If you only want to serve malicious DLLs, you could simply host the DLLs on an anonymous access share on your host OS or a compromised server share.
 
-### Create and access the SpoolSploit Docker Container
+### Create and access the SpoolSploit Docker container
 1. Clone this repository
 ```
 git clone https://github.com/BeetleChunks/SpoolSploit
@@ -30,7 +30,7 @@ sudo docker run -dit -p 445:445 --name spoolsploit spoolsploit:latest
 sudo docker exec -it spoolsploit /bin/bash
 ```
 
-### Commandline Usage
+### Command-line Usage
 ```
 usage: spool_sploit.py [-h] -a {spoolsample,nightmare} -rH RHOST -rP {139,445} [-lH LHOST] [-lS LSHARE] -d DOMAIN -u USER -p PASSWD
 
@@ -55,7 +55,7 @@ optional arguments:
 ```
 
 ### SpoolSample - Capture and relay Windows machine account credentials
-The SpoolSploit Docker container includes [Responder](https://github.com/lgandx/Responder) for relaying machine account hashes obtained from executing the ```spoolsample``` attack in SpoolSploit. As several great articles exist detail the process of relaying privileged machine account credentials for privilege escalation, I will not go into those details here.
+The SpoolSploit Docker container includes [Responder](https://github.com/lgandx/Responder) for relaying machine account hashes obtained from executing the ```spoolsample``` attack in SpoolSploit. As several great articles exist detailing the process of relaying privileged machine account credentials for privilege escalation, I will not go into those details here.
 
 <p align="center">
   <img src="media/SpoolSample.gif" width="75%">
