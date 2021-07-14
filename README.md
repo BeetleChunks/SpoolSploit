@@ -83,6 +83,6 @@ This proof-of-concept code has been created for academic research and is not int
 - [leechristensen](https://github.com/leechristensen/SpoolSample) discovered the SpoolSample exploit and created a C# POC [SpoolSample](https://github.com/leechristensen/SpoolSample/tree/master/SpoolSample)
 - [3xocyte](https://gist.github.com/3xocyte) created a Python2 SpoolSample POC [dementor](https://gist.github.com/3xocyte/cfaf8a34f76569a8251bde65fe69dccc#file-dementor-py).
 
-## PrintNightmare - CVE-2021-1675
+## PrintNightmare - CVE-2021-1675 / CVE-2021-34527
 - [cube0x0](https://github.com/cube0x0) created Python PrintNightmare exploit after implementing the MS-PAR & MS-RPRN protocols and API calls in [Impacket](https://github.com/SecureAuthCorp/impacket).
 - [Zhiniang Peng](https://twitter.com/edwardzpeng) & [Xuefeng Li](https://twitter.com/lxf02942370) discovered this exploit.
